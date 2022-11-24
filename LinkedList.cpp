@@ -122,13 +122,14 @@ void hapus_belakang(){
  }
  else{
   hapus = awal;
-  while(hapus->next != akhir){
-   hapus = hapus->next;
-   akhir=hapus;
-   hapus=akhir->next;
-   akhir->next=NULL;
-   free(hapus);
-  }
+    while(hapus->next!=akhir)
+    {
+    hapus=hapus->next;
+    }
+    akhir=hapus;
+    hapus=hapus->next;
+    akhir->next=NULL;
+    free(hapus);
  }
  cout << endl << endl;
  tampil();
